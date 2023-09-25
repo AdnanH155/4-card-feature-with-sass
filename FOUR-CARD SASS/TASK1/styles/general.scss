@@ -1,0 +1,111 @@
+/*variables*/
+$color-one: #4d4f62;
+$font-family-one: Poppins, Courier, monospace;
+$background-color-one: #f2f2f2;
+$background-color-two: #ffff;
+
+body {
+  background-color: $background-color-one;
+}
+h1 {
+  font-family: $font-family-one;
+}
+h2 {
+  font-family: $font-family-one;
+  color: $color-one;
+}
+h3 {
+  font-family: $font-family-one;
+  color: $color-one;
+}
+p {
+  font-family: $font-family-one;
+  color: $color-one;
+}
+.card {
+  border-radius: 6px;
+  background-color: $background-color_two;
+  width: 300px;
+  margin: auto;
+  padding: 25px;
+  padding-top: 5px;
+  margin-bottom: 20px;
+}
+
+/*nesting*/
+header {
+  width: 90%;
+  margin: auto;
+  h1 {
+    color: $color-one;
+    text-align: center;
+    font-size: 24px;
+    font-weight: lighter;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 24px;
+  }
+  p {
+    text-align: center;
+    font-size: 15px;
+  }
+}
+
+.supervisor {
+  border-top: solid 4px hsl(180, 62%, 55%);
+}
+.team-builder {
+  border-top: solid 4px hsl(0, 78%, 62%);
+}
+.karma {
+  border-top: solid 4px hsl(34, 97%, 64%);
+}
+.calculator {
+  border-top: solid 4px hsl(212, 86%, 64%);
+}
+
+/*mixin*/
+@mixin flex {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.supervisor-img {
+  @include flex;
+}
+.team-builder-img {
+  @include flex;
+}
+.karma-img {
+  @include flex;
+}
+.calculator-img {
+  @include flex;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    margin: 10px;
+    margin-bottom: 20px;
+  }
+  header {
+    h1 {
+      font-size: 2rem;
+      padding-top: 90px;
+      line-height: 10px;
+    }
+    p {
+      font-size: small;
+    }
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
